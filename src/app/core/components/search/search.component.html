@@ -1,8 +1,10 @@
 <div class="container">
   <div class="search-wrapper">
-    <label for="searchfield"></label>
-    <input id="searchfield" type="text" class="form-control" placeholder="Search GitHub" [(ngModel)]="query"/>
-    <input type="submit" class="search-btn" value="Search" (click)="seatchGithub()"/>
+    <form (submit)="seatchGithub()">
+      <label for="searchfield"></label>
+      <input id="searchfield" name="search" type="text" class="form-control" placeholder="Search GitHub" [(ngModel)]="query"/>
+      <input type="submit" class="search-btn" value="Search"/>
+    </form>
   </div>
   <h5 *ngIf="users.length > 0" class="result-count">Number of results found: {{totalCount}}</h5>
   <div *ngFor="let user of users" >
