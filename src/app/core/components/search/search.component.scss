@@ -6,7 +6,50 @@
 }
 .form-control {
   height: 30px;
-  width: 400px;
-  padding: .3rem;
+  width: 800px;
+  padding: 5px 12px;
   border-radius: 6px;
+  background: #0D1117;
+  color: var(--color-primary);
+  outline: none;
+  border: 1px solid #21262d;
+  vertical-align: center;
+  font-size: var(--base-font)
+}
+.container {
+  max-width: 1021px;
+  margin-right: auto;
+  margin-left:auto;
+}
+.search-btn {
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 5px 16px;
+  background: #21262d;
+  margin-left: 6px;
+  color: var(--color-primary);
+  font-size: var(--base-font);
+}
+.result-count {
+  color: var(--color-primary);
+}
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.user-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.user-name {
+  color: var(--color-primary);
+  font-size: var(--base-font);
+  font-family: var(--ff-primary);
+  color: #58a6ff;
 }

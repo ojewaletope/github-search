@@ -1,5 +1,14 @@
-<div class="search-wrapper">
-  <label for="searchfield"></label>
-  <input id="searchfield" type="text" class="form-control" placeholder="Search GitHub"/>
-  <input type="submit" value="Search"/>
+<div class="container">
+  <div class="search-wrapper">
+    <label for="searchfield"></label>
+    <input id="searchfield" type="text" class="form-control" placeholder="Search GitHub" [(ngModel)]="query"/>
+    <input type="submit" class="search-btn" value="Search" (click)="seatchGithub()"/>
+  </div>
+  <h5 *ngIf="users.length > 0" class="result-count">Number of results found: {{totalCount}}</h5>
+  <div *ngFor="let user of users" >
+   <a class="user" [href]="user.html_url" target="_blank">
+     <img class="user-img" src=""[src]="user.avatar_url" [alt]="user.login"/>
+     <div class="user-name">{{user.login | titlecase}}</div>
+   </a>
+  </div>
 </div>
